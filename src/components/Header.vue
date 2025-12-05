@@ -1,5 +1,7 @@
 <script setup>
 import { Icon } from '@iconify/vue';
+import { RouterLink } from 'vue-router';
+import router from '../router';
 </script>
 
 <template>
@@ -8,11 +10,18 @@ import { Icon } from '@iconify/vue';
 
 <nav>
     <ul>
-    <li><a href="http://localhost:5174/lupa"><Icon class="icon" icon="basil:search-outline" /></a></li>
-    <li><a href="http://localhost:5174/">Inicio</a></li>
-    <li><a href="http://localhost:5174/galeria">Galeria</a></li>
-    <li><a href="http://localhost:5174/favoritos">Favoritos</a></li>
-    <li><a href="http://localhost:5174/usePage"><Icon class="icon" icon ="basil:user-outline"/></a></li>
+        <li>
+          <RouterLink to="/lupa">
+            <Icon class="icon" icon="basil:search-outline" />
+          </RouterLink>
+        </li>
+     <li><RouterLink to="/">Inicio</RouterLink></li>
+    <li><RouterLink to="/galeria">Galeria</RouterLink></li>
+    <li><RouterLink to="/favoritos">Favoritos</RouterLink></li>
+    <li><RouterLink to="/userPage">
+    <Icon class="icon" icon="basil:user-outline" />
+    </RouterLink>
+    </li>
 </ul>
 </nav>
 </header>
