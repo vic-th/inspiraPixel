@@ -29,12 +29,15 @@
     h2{font-size: 2rem;}
 
 span{
-    font-size: 3rem;
+    font-size: 2rem;
     color: darkmagenta;
    
 }
 
 p{
+font-family: "Poppins";
+font-weight: 500;
+font-size: 1rem;
  
 }
 }

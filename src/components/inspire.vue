@@ -4,9 +4,10 @@ import Card from './Card.vue';
 import axios from 'axios';
 
 const imagens = ref([]);
+const imagensAleatorias =Math.floor(Math.random() * 100) + 1
 
 async function caregarImg() {
-      const res = await axios.get("https://picsum.photos/v2/list?page=2&limit=9");
+      const res = await axios.get(`https://picsum.photos/v2/list?page=${imagensAleatorias}&limit=9`);
     
     console.log(res);
 
@@ -21,6 +22,7 @@ caregarImg();
 
 <section class="cards">
 <Card v-for="img in imagens" :imagem="img.download_url" />
+<h2>mais imagens na galeria</h2>
 </section>
 </template>
 

@@ -1,12 +1,19 @@
 <script setup>
 defineProps(["imagem"]);
 import { Icon } from '@iconify/vue';
+import { ref } from 'vue';
+
+const like = ref(false)
+
+function darLike() {
+    like.value = !like.value
+}
 </script>
 
 <template>
 
 <div class="card">
-    <button><Icon icon="streamline-flex:heart" width="14" height="14" /></button>
+    <button @click="darLike"><Icon id="curtida" :icon="like ? 'prime:thumbs-up-fill' : 'prime:thumbs-up'"/></button>
     <img :src="imagem" alt="">
 
 </div>
@@ -36,6 +43,15 @@ import { Icon } from '@iconify/vue';
         background-color: transparent;
         border: none;
     }
+
+    #curtida{
+        color: rgb(255, 170, 0);
+        
+        width: 1.8rem;
+        height: 1.5rem;
+    }
+
+ 
 
 }
 </style>

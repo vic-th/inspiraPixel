@@ -11,9 +11,7 @@ import router from '../router';
 <nav>
     <ul>
         <li>
-          <RouterLink to="/lupa">
-            <Icon class="icon" icon="basil:search-outline" />
-          </RouterLink>
+          <RouterLink to="/lupa"><Icon class="icon" icon="basil:search-outline" /></RouterLink>
         </li>
      <li><RouterLink to="/">Inicio</RouterLink></li>
     <li><RouterLink to="/galeria">Galeria</RouterLink></li>
